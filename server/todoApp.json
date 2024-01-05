@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "username": "johndoe",
+      "email": "john.doe@example.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Ismael Ait El Kamel",
+      "username": "iaek",
+      "email": "isma.aek@example.com",
+      "password": "123"
+    },
+    {
+      "name": "Ismael",
+      "username": "test",
+      "email": "idsaofhuksvj",
+      "password": "123",
+      "id": 8
+    }
+  ],
+  "todos": [
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "delectus aut autem",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "title": "test",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "title": "test 2",
+      "completed": false,
+      "id": 8
+    }
+  ]
+}

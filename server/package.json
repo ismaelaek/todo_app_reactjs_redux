@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "start":"json-server --watch todoApp.json --port 3006"
+  }
+}
