@@ -33,7 +33,7 @@ const Home = () => {
                 {isLoading ? <IsloadingComp />
                     : (
                         <div className="todos-list">
-                            {todos.length === 0 ? <h3>Nothing todo yet</h3> : 
+                            {todos.length === 0 ? <h3 style={{textAlign: 'center'}}>Nothing todo yet... </h3> : 
                                 todos.map(item => {
                                     return <TodoItem todo={item} />
                                 })

@@ -3,9 +3,10 @@ import { useDispatch } from 'react-redux'
 import { message, Popconfirm } from 'antd';
 import { deletTodo } from '../features/todosSlice';
 import { handleComplete } from '../features/todosSlice';
+import { FaTimes } from 'react-icons/fa';
 const TodoItem = ({ todo }) => {
     const dispatch = useDispatch();
-    const confirm = (e) => {
+    const handleConfirm = () => {
         dispatch(deletTodo(todo.id))
         message.success('Todo was deleted');
     };
@@ -24,11 +25,11 @@ const TodoItem = ({ todo }) => {
                 <Popconfirm
                     title="Delete the task"
                     description="Are you sure to delete this task?"
-                    onConfirm={confirm}
+                    onConfirm={handleConfirm}
                     okText="Yes"
                     cancelText="No"
                 >
-                    <button >Delete</button>
+                    <FaTimes style={{color: 'red', fontSize: 20, cursor: 'pointer'}}/>
                 </Popconfirm>
             </div>
         </div>
