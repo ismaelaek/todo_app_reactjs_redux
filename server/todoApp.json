@@ -13,33 +13,7 @@
       "username": "iaek",
       "email": "isma.aek@example.com",
       "password": "123"
-    },
-    {
-      "name": "Ismael",
-      "username": "test",
-      "email": "idsaofhuksvj",
-      "password": "123",
-      "id": 8
     }
   ],
-  "todos": [
-    {
-      "userId": 2,
-      "title": "test",
-      "completed": false,
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "title": "kljjhugyjhfgh",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "title": "kljhvkj",
-      "completed": false,
-      "id": 10
-    }
-  ]
+  "todos": []
 }

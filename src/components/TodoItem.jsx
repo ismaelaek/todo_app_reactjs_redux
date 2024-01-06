@@ -13,7 +13,11 @@ const TodoItem = ({ todo }) => {
     const handleCheck = () => {
         dispatch(handleComplete({ ...todo, completed: !todo.completed }));
     };
-
+    const btnStyle = {
+        color: 'red',
+        fontSize: 20,
+        cursor: 'pointer'
+    }
 
     return (
         <div className='todo-item'>
@@ -22,15 +26,18 @@ const TodoItem = ({ todo }) => {
                 <p className={todo.completed && 'done'}>{todo.title}</p>
             </div>
             <div className="todo-actions">
-                <Popconfirm
-                    title="Delete the task"
-                    description="Are you sure to delete this task?"
-                    onConfirm={handleConfirm}
-                    okText="Yes"
-                    cancelText="No"
-                >
-                    <FaTimes style={{color: 'red', fontSize: 20, cursor: 'pointer'}}/>
-                </Popconfirm>
+                {todo.completed ? (<FaTimes style={btnStyle} onClick={handleConfirm} />
+                    ) : (
+                        <Popconfirm
+                            title="Task is not done yet"
+                            description="Are you sure to delete it anyway?"
+                            onConfirm={handleConfirm}
+                            okText="Yes"
+                            cancelText="No"
+                            >
+                            <FaTimes style={btnStyle}/>
+                        </Popconfirm>
+                    )}
             </div>
         </div>
     );
