@@ -35,7 +35,7 @@ const TodoItem = ({ todo }) => {
                             okText="Yes"
                             cancelText="No"
                             >
-                            <FaTimes style={btnStyle}/>
+                            <FaTimes style={btnStyle} />
                         </Popconfirm>
                     )}
             </div>

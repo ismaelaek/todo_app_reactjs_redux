@@ -16,21 +16,17 @@ const AddTodo = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!todo.title) {
-            message.warning("Please enter a title")
+        if (!todo.title || todo.title.trim() ==='' ) {
+            message.warning("Field can not be empty!!")
             return;
         }
         dispatch(addTodo(todo))
-        setTodo({
-            "userId": user.id,
-            "title": "",
-            "completed": false
-        });
+        setTodo({...todo, title: ''});
         
     }
     return (
         <form className="addTodo-form" onSubmit={handleSubmit}>
-            <input type="text" className="input" name="title" placeholder="New Task"  value={todo.title} onChange={handleChenge}/>
+            <input type="text" className="input" name="title" placeholder="What should be done ?"  value={todo.title} onChange={handleChenge}/>
             <input className="button--submit" value="Add" type="submit"/>
         </form>
         

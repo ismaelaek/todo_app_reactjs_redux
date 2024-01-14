@@ -49,7 +49,7 @@ const Signup = () => {
             <input type="text" placeholder="Email" name="email" onChange={handleChange}/>
 
             <label htmlFor="password">Password</label>
-            <input type="text" placeholder="Password" name="password" onChange={handleChange} />
+            <input type="password" placeholder="Password" name="password" onChange={handleChange} />
 
             <input type="submit" className='submit' value={isLoading? 'Submitting' : 'Sign Up'} />
                 

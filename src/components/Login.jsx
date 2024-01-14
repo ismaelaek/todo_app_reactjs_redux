@@ -23,6 +23,8 @@ const Login = () => {
             navigate('/');
         }
     }, [user, isLoading, navigate]);
+    let text;
+    isLoading ? text= 'Submitting' : text = 'Log In'
 
     return (
         <div style={{backgroundColor: '#101010', height: '100vh'}}>
@@ -37,9 +39,9 @@ const Login = () => {
             <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
 
             <label htmlFor="password">Password</label>
-            <input type="text" placeholder="Password" name="password" onChange={handleChange} />
+            <input type='password' placeholder="Password" name="password" onChange={handleChange} />
 
-            <input type="submit" className='submit' value={isLoading ? 'Submitting' : 'Log In'} />
+            <input type="submit" className='submit' value={text} />
                 
             <p className='err-message'>{error && error}</p>
             <Link className='create-account' to='/signup'>Create Account</Link>

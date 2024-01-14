@@ -132,7 +132,9 @@ nav{
 }
 
 .login-form input[type="text"],
-.regester input[type="text"] {
+.regester input[type="text"],
+.login-form input[type="password"],
+.regester input[type="password"] {
     display: block;
     height: 50px;
     width: 100%;

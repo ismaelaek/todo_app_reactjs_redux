@@ -37,16 +37,18 @@ const Home = () => {
             <div className="add-todo">
                 <AddTodo />
             </div >
-
-            <Popconfirm
-                title="Delete All"
-                description="Are you sure to delete all tasks?"
-                onConfirm={handleConfirm}
-                okText="Yes"
-                cancelText="No"
-            >
-                <button  className = 'logout' style={{display:'flex', gap:5, marginTop:20}}> Delete All <FaTimes /> </button>
-            </Popconfirm>
+            {todos.length !== 0 &&
+                <Popconfirm
+                    title="Delete All"
+                    description="Are you sure to delete all tasks?"
+                    onConfirm={handleConfirm}
+                    okText="Yes"
+                    cancelText="No"
+                >
+                    <button  className = 'logout' style={{display:'flex', gap:5, marginTop:20}}> Delete All <FaTimes /> </button>
+                </Popconfirm>
+            }
+            
             <div className='container'>
 
                 {isLoading ? <IsloadingComp />
