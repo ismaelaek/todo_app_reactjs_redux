@@ -3,9 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom';
 import { addUser } from '../features/userSlice';
 import { message } from 'antd';
+import bcrypt from 'bcryptjs'
+
 const Signup = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch();
+    const salt = bcrypt.genSaltSync(10)
+    
     const [userInfo, setUserInfo] = useState({
         name: '',
         username: '',
@@ -13,13 +17,22 @@ const Signup = () => {
         password: ''
 
     })
-    const { user, isLoading, error } = useSelector(state => state.user);
+    const { user, isLoading } = useSelector(state => state.user);
     const handleChange = (e) => {
-        setUserInfo({...userInfo, [e.target.name]: e.target.value});
+        if (e.target.name === 'password') {
+            let hashedPassword = bcrypt.hashSync(userInfo.password, salt)
+            setUserInfo({...userInfo, [e.target.name]: hashedPassword})
+        } else {
+            setUserInfo({...userInfo, [e.target.name]: e.target.value});
+        }
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!userInfo.name || !userInfo.username || !userInfo.password || !userInfo.email) {
+        if (userInfo.name.trim() === '' ||
+            userInfo.username.trim() === '' ||
+            userInfo.password.trim() === '' ||
+            userInfo.email.trim()===''
+        ) {
             message.warning("Please Don't leave any fields blank")
         }
         else {

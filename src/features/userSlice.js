@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import bcrypt from 'bcryptjs'
 
 const initialState = {
     user: '',
@@ -11,7 +12,7 @@ export const login = createAsyncThunk('login', async (loginInfo, thunkAPI) => {
     try {
         const response = await axios.get('http://localhost:3006/users');
         const user = response.data.find(item => item.username === loginInfo.username && 
-                                                item.password === loginInfo.password
+                                        bcrypt.compare(loginInfo.password, item.password)
         )
         if (!user) {
             throw new Error('Username or password incorrect')

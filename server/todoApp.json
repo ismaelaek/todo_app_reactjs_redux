@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "username": "johndoe",
-      "email": "john.doe@example.com",
-      "password": "123"
-    },
-    {
-      "id": 2,
-      "name": "Ismael Ait El Kamel",
+      "name": "Ismail Ait El Kamel",
       "username": "iaek",
-      "email": "isma.aek@example.com",
-      "password": "123"
+      "email": "ismael.aitelkamel17@gmail.com",
+      "password": "$2a$10$xw1i9nusiF6QBbVJZeRAAOvkCp7u2sN0ndKKcfVvdJ0ZbYuM6PbT2",
+      "id": 1
     }
   ],
-  "todos": []
+  "todos": [
+    {
+      "userId": 1,
+      "title": "Hello guys ",
+      "completed": false,
+      "id": 51
+    }
+  ]
 }

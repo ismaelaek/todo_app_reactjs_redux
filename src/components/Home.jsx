@@ -25,7 +25,7 @@ const Home = () => {
     }
     // error ? console.log(error) : console.log('no errors')
     return (
-        <main className={theme==='dark' && 'dark'}>
+        <main className={theme==='dark'? 'dark': undefined}>
             <h1 style={{
                 display: 'flex',
                 alignItems: 'center',
