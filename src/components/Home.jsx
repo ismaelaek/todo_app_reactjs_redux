@@ -39,15 +39,17 @@ const Home = () => {
                 <AddTodo />
             </div >
             {todos.length !== 0 &&
-                <Popconfirm
-                    title="Delete All"
-                    description="Are you sure to delete all tasks?"
-                    onConfirm={handleConfirm}
-                    okText="Yes"
-                    cancelText="No"
-                >
-                    <button  className = 'logout' style={{display:'flex', gap:5, marginTop:20}}> Delete All <FaTimes /> </button>
-                </Popconfirm>
+                <div className='delete-all-container'>
+                    <Popconfirm
+                        title="Delete All"
+                        description="Are you sure to delete all tasks?"
+                        onConfirm={handleConfirm}
+                        okText="Yes"
+                        cancelText="No"
+                    >
+                        <button  className = 'delete-all' style={{display:'flex', gap:5, marginTop:20}}> Delete All <FaTimes /> </button>
+                    </Popconfirm>
+                </div>
             }
             
             <div className='container'>

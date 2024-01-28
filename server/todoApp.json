@@ -13,6 +13,13 @@
       "email": "test@gmail.com",
       "password": "$2a$10$rJMqSp2FFIeh3m6fyRVNs.Z4JCcwgSW8OUauPrCGCpjuXtAd9pUg2",
       "id": 2
+    },
+    {
+      "name": "John Doe",
+      "username": "jony",
+      "email": "jony@example.com",
+      "password": "$2a$10$kFF9bdsrHNucRL.RzE/BYeVt/MPGq0NkdlaAE9qvFfrUvyo1sTcJ6",
+      "id": 3
     }
   ],
   "todos": [
@@ -23,16 +30,40 @@
       "id": 7
     },
     {
-      "userId": 1,
-      "title": "Watch Game Of Thrones ",
+      "userId": 3,
+      "title": "Feed my cat ",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "title": "Bring Adam from school at 3pm",
       "completed": false,
-      "id": 8
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "title": "Clean my room",
+      "completed": true,
+      "id": 11
     },
     {
       "userId": 1,
-      "title": "Play a game",
+      "title": "Hello world",
       "completed": true,
-      "id": 9
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "This is a test ",
+      "completed": false,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Test 2",
+      "completed": true,
+      "id": 14
     }
   ]
 }

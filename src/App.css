@@ -190,7 +190,7 @@ main{
     min-height: 90vh;
 }
 .add-todo{
-    margin-top: 30px;
+    margin: 30px 0 ;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -233,8 +233,24 @@ main{
     border-color: #ff512f;
     outline: none;
 }
+.delete-all-container{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.delete-all{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ff0000;
+    transition: ease-in-out .3s;
+}
+.delete-all:hover{
+    color: #cc0000;
+    
+}
 .container{
-    margin-top: 30px;
     width: 50%;
     height: fit-content;
     padding-bottom: 10px;
