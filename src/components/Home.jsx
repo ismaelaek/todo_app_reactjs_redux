@@ -7,6 +7,7 @@ import { getTodos } from '../features/todosSlice';
 import TodoItem from './TodoItem';
 import { FaTimes } from 'react-icons/fa';
 import { deleteAll } from '../features/todosSlice';
+import Statistics from './Statistics';
 
 
 const Home = () => {
@@ -63,6 +64,7 @@ const Home = () => {
                     )
                 }
             </div>
+            <Statistics/>
         </main>
     );
 };

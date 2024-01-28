@@ -6,14 +6,33 @@
       "email": "ismael.aitelkamel17@gmail.com",
       "password": "$2a$10$xw1i9nusiF6QBbVJZeRAAOvkCp7u2sN0ndKKcfVvdJ0ZbYuM6PbT2",
       "id": 1
+    },
+    {
+      "name": "test test",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "$2a$10$rJMqSp2FFIeh3m6fyRVNs.Z4JCcwgSW8OUauPrCGCpjuXtAd9pUg2",
+      "id": 2
     }
   ],
   "todos": [
     {
-      "userId": 1,
-      "title": "Hello guys ",
+      "userId": 2,
+      "title": "This is a test ",
       "completed": false,
-      "id": 51
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "title": "Watch Game Of Thrones ",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "title": "Play a game",
+      "completed": true,
+      "id": 9
     }
   ]
 }
